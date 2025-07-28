@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokemon Sun & Moon - Pandanimez</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background: #121212;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    iframe {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    .episode-buttons {
+      margin-top: 1rem;
+    }
+    .episode-buttons button {
+      background: rgba(255,255,255,0.05);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      margin: 0 0.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .episode-buttons button:hover {
+      background: rgba(255,255,255,0.15);
+    }
+    .active {
+      background: rgba(255,255,255,0.2) !important;
+    }
+<a href="index.html" class="home-button">
+  <i class="fa fa-home"></i>
+</a>
+
+<style>
+  .home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 999;
+  }
+
+  .home-button i {
+    font-size: 20px;
+  }
+</style>
+  </style>
+</head>
+<body>
+  <h1>Pokemon Sun & Moon</h1>
+  <iframe id="video" src="https://archive.org/embed/uncut-pokemon-sun-and-moon-078-clash-of-the-ultra-beasts-operation-boom-boom-crackle" width="560" height="384" frameborder="0" allowfullscreen></iframe>
+  <div class="episode-buttons">
+    <button onclick="switchEpisode('https://archive.org/embed/uncut-pokemon-sun-and-moon-078-clash-of-the-ultra-beasts-operation-boom-boom-crackle', this)">1</button>
+
+  </div>
+  <script>
+    function switchEpisode(embedUrl, btn) {
+      document.getElementById("video").src = embedUrl;
+      document.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    }
+  </script>
+</body>
+</html>
